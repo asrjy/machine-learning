@@ -1,8 +1,7 @@
-# Linear Regression With Stochastic Gradient Descent for Wine Quality
+from math import exp
 from random import seed
 from random import randrange
 from csv import reader
-from math import sqrt
 
 def load_csv(filename):
     dataset = list()
@@ -30,13 +29,12 @@ def dataset_minmax(dataset):
 def normalize_dataset(dataset, minmax):
     for row in dataset:
         for i in range(len(row)):
-            row[i] = (row[i] - minmax[i][0]) / (minmax[i][1] - minmax[i][0])
-
+            row[i] = (row[i] - minmax[i][0])/(minmax[i][1] - minmax[i][0])
 
 def cross_validation_split(dataset, n_folds):
     dataset_split = list()
     dataset_copy = list(dataset)
-    fold_size = int(len(dataset) / n_folds)
+    fold_size = int(len(dataset)/n_folds)
     for _ in range(n_folds):
         fold = list()
         while len(fold) < fold_size:
@@ -45,15 +43,12 @@ def cross_validation_split(dataset, n_folds):
         dataset_split.append(fold)
     return dataset_split
 
-
-def rmse_metric(actual, predicted):
-    sum_error = 0.0
+def accuracy_metric(actual, predicted):
+    correct = 0
     for i in range(len(actual)):
-        prediction_error = predicted[i] - actual[i]
-        sum_error += (prediction_error ** 2)
-    mean_error = sum_error / float(len(actual))
-    return sqrt(mean_error)
-
+        if actual[i] == predicted[i]:
+            correct += 1
+    return correct/float(len(actual)) * 100.0
 
 def evaluate_algorithm(dataset, algorithm, n_folds, *args):
     folds = cross_validation_split(dataset, n_folds)
@@ -69,41 +64,45 @@ def evaluate_algorithm(dataset, algorithm, n_folds, *args):
             row_copy[-1] = None
         predicted = algorithm(train_set, test_set, *args)
         actual = [row[-1] for row in fold]
-        rmse = rmse_metric(actual, predicted)
-        scores.append(rmse)
+        accuracy = accuracy_metric(actual, predicted)
+        scores.append(accuracy)
     return scores
-
 
 def predict(row, coefficients):
     yhat = coefficients[0]
     for i in range(len(row)-1):
-        yhat += coefficients[i + 1] * row[i]
-    return yhat
-
+        yhat += coefficients[i+1]*row[i]
+    return 1.0/(1.0+exp(-yhat))
 
 def coefficients_sgd(train, l_rate, n_epoch):
     coef = [0.0 for i in range(len(train[0]))]
-    for _ in range(n_epoch):
+    for epoch in range(n_epoch):
+        sum_error = 0
         for row in train:
             yhat = predict(row, coef)
-            error = yhat - row[-1]
-            coef[0] = coef[0] - l_rate * error
+            error = row[-1] - yhat
+            sum_error += error**2
+            coef[0] = coef[0] + l_rate * error * yhat * (1.0 - yhat)
             for i in range(len(row)-1):
-                coef[i + 1] = coef[i + 1] - l_rate * error * row[i]
+                coef[i+1] = coef[i+1] + l_rate * error * yhat * (1.0 - yhat) * row[i]
+        print(print('>epoch=%d, lrate=%.3f, error=%.3f' % (epoch, l_rate, sum_error)))
     return coef
 
-def linear_regression_sgd(train, test, l_rate, n_epoch):
+def logistic_regression(train, test, l_rate, n_epoch):
     predictions = list()
     coef = coefficients_sgd(train, l_rate, n_epoch)
     for row in test:
         yhat = predict(row, coef)
+        yhat = round(yhat)
         predictions.append(yhat)
-    return(predictions)
+    return predictions
 
 seed(69)
 
-filename = '../datasets/winequality-white.csv'
+filename = '../datasets/pima-indians-diabetes.csv'
+
 dataset = load_csv(filename)
+
 for i in range(len(dataset[0])):
     str_column_to_float(dataset, i)
 
@@ -111,8 +110,9 @@ minmax = dataset_minmax(dataset)
 normalize_dataset(dataset, minmax)
 
 n_folds = 5
-l_rate = 0.01
-n_epoch = 50
-scores = evaluate_algorithm(dataset, linear_regression_sgd, n_folds, l_rate, n_epoch)
-print('Scores: %s' % scores)
-print('Mean RMSE: %.3f' % (sum(scores)/float(len(scores))))
+l_rate = 0.1
+n_epoch = 100
+scores = evaluate_algorithm(dataset, logistic_regression, n_folds, l_rate, n_epoch)
+print(f"Scores: {scores}")
+print(f"Mean Accuracy: {sum(scores)/float(len(scores))}")
+
