@@ -13,9 +13,9 @@
 
 ### Algorithms 
 Implement these Machine Learning Algorithms from scratch.
-- [ ] Simple Linear Regression
-- [ ] Multivariate Linear Regression
-- [ ] Logistic Regression
+- [X] Simple Linear Regression
+- [X] Multivariate Linear Regression
+- [X] Logistic Regression
 - [ ] Perceptron
 - [ ] Classification and Regression Trees
 - [ ] Naive Bayes
