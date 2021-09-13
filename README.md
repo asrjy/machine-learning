@@ -51,6 +51,7 @@ Should be comfortable with the tool.
 - [ ] TensorFlow
 - [ ] Linux
 - [ ] Django
+- [ ] Scrapy
 
 ### Articles
 This list will be updated frequently as I read more interesting articles. 
