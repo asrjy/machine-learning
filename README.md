@@ -34,6 +34,7 @@ Implement these Machine Learning Algorithms from scratch.
  - [ ] [Hands-On Machine Learning with Scikit-Learn, Keras, and TensorFlow](https://www.oreilly.com/library/view/hands-on-machine-learning/9781492032632/)
  - [ ] [An Introduction to Statistical Learning](https://www.statlearning.com/)
  - [ ] [Deep Learning](https://www.deeplearningbook.org/)
+ - [ ] [The Art of Statistics: Learning from Data](https://www.amazon.in/gp/product/0241258766/ref=ppx_yo_dt_b_asin_title_o00_s00?ie=UTF8&psc=1)
 
 ### Courses
 - [ ] [Machine Learning by Andrew Ng](https://www.youtube.com/watch?v=PPLop4L2eGk&list=PLLssT5z_DsK-h9vYZkQkYNWcItqhlRJLN)
