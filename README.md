@@ -56,5 +56,6 @@ Should be comfortable with the tool.
 
 ### Articles
 This list will be updated frequently as I read more interesting articles. 
+- [X] https://towardsdatascience.com/stop-using-csvs-for-storage-this-file-format-is-150-times-faster-158bd322074e
 
 **Thanks to [Amit Chaudhary](www.github.com/amitness) for his github repo which inspired to make my own**
