@@ -27,6 +27,7 @@ Implement these Machine Learning Algorithms from scratch.
 - [ ] Stacked Generalization
 - [X] Gated Recurrent Unit (GRU)
 - [X] Adam Optimizer
+- [X] Long Short-term Memory (LSTM)
  
 ### Books
  - [ ] [Machine Learning Algorithms from Scratch](https://machinelearningmastery.com/machine-learning-algorithms-from-scratch/)
