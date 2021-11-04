@@ -16,15 +16,17 @@ Implement these Machine Learning Algorithms from scratch.
 - [X] Simple Linear Regression
 - [X] Multivariate Linear Regression
 - [X] Logistic Regression
-- [ ] Perceptron
-- [ ] Classification and Regression Trees
-- [ ] Naive Bayes
-- [ ] K-Nearest Neighbours
+- [X] Perceptron
+- [X] Classification and Regression Trees
+- [X] Naive Bayes
+- [X] K-Nearest Neighbours
 - [ ] Learning Vector Quantization
-- [ ] Backpropogation
+- [X] Backpropogation
 - [ ] Bootstrap Aggregation
 - [ ] Random Forest
 - [ ] Stacked Generalization
+- [X] Gated Recurrent Unit (GRU)
+- [X] Adam Optimizer
  
 ### Books
  - [ ] [Machine Learning Algorithms from Scratch](https://machinelearningmastery.com/machine-learning-algorithms-from-scratch/)
