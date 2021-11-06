@@ -1,18 +1,10 @@
 # My journey to becoming a Machine Learning Engineer
 
-<p align="center">
-  <img src="https://i.imgur.com/A5J6Qdb.png" width="316" height="292"/>
-</p>
+## What's in this repo?
 
-**Learning Philosophy**: 
-- [Data Scientists Should Be More End-to-End](https://eugeneyan.com/writing/end-to-end-data-science/)
-- [Just in Time Learning](https://www.developgoodhabits.com/just-in-time-learning/)
-- [Master Adjacent Disciplines](http://www.effectiveengineer.com/blog/master-adjacent-disciplines)
-- [T-shaped skills](https://en.wikipedia.org/wiki/T-shaped_skills)
-- [The Power of Tiny Gains](https://jamesclear.com/continuous-improvement)
+### My analysis of datasets I find interesting
 
-### Algorithms 
-Implement these Machine Learning Algorithms from scratch.
+### Implementations of Algorithms from Scratch
 - [X] Simple Linear Regression
 - [X] Multivariate Linear Regression
 - [X] Logistic Regression
@@ -20,16 +12,18 @@ Implement these Machine Learning Algorithms from scratch.
 - [X] Classification and Regression Trees
 - [X] Naive Bayes
 - [X] K-Nearest Neighbours
-- [ ] Learning Vector Quantization
 - [X] Backpropogation
-- [ ] Bootstrap Aggregation
-- [ ] Random Forest
-- [ ] Stacked Generalization
 - [X] Gated Recurrent Unit (GRU)
 - [X] Adam Optimizer
 - [X] Long Short-term Memory (LSTM)
- 
-### Books
+- [ ] Learning Vector Quantization
+- [ ] Bootstrap Aggregation
+- [ ] Random Forest
+- [ ] Stacked Generalization
+
+### Case Studies and Analysis of Kaggle Winners
+
+### Book Recommendations
  - [ ] [Machine Learning Algorithms from Scratch](https://machinelearningmastery.com/machine-learning-algorithms-from-scratch/)
  - [ ] [Mathematics for Machine Learning](https://mml-book.com/)
  - [ ] [Learning From Data](https://www.amazon.in/Learning-Data-Yaser-S-Abu-Mostafa/dp/1600490069/ref=sr_1_4?dchild=1&keywords=learning+from+data&qid=1631505378&s=books&sr=1-4) 
@@ -39,7 +33,7 @@ Implement these Machine Learning Algorithms from scratch.
  - [ ] [Deep Learning](https://www.deeplearningbook.org/)
  - [ ] [The Art of Statistics: Learning from Data](https://www.amazon.in/gp/product/0241258766/ref=ppx_yo_dt_b_asin_title_o00_s00?ie=UTF8&psc=1)
 
-### Courses
+### Course Recommendations
 - [ ] [Machine Learning by Andrew Ng](https://www.youtube.com/watch?v=PPLop4L2eGk&list=PLLssT5z_DsK-h9vYZkQkYNWcItqhlRJLN)
 - [ ] [Deep Neural Networks](https://www.youtube.com/watch?v=CS4cs9xVecg&list=PLpFsSf5Dm-pd5d3rjNtIXUHT-v7bdaEIe)
 - [ ] [StatQuest Machine Learning Playlist](https://www.youtube.com/watch?v=Gv9_4yMHFhI&list=PLblh5JKOoLUICTaGLRoHQDuF_7q2GfuJF)
@@ -48,18 +42,10 @@ Implement these Machine Learning Algorithms from scratch.
 - [ ] [SQL](https://practice.geeksforgeeks.org/courses/sql)
 - [ ] [Applied AI Course](https://www.appliedaicourse.com/)
  
-### Tools and Technologies 
-Should be comfortable with the tool.
+### Tools and Technologies Checklist
 - [ ] Big 3: Numpy, Pandas, Matplotlib
 - [ ] MySQL
 - [ ] TensorFlow
 - [ ] Linux
 - [ ] Django
 - [ ] Scrapy
-
-### Articles
-This list will be updated frequently as I read more interesting articles. 
-- [X] https://towardsdatascience.com/stop-using-csvs-for-storage-this-file-format-is-150-times-faster-158bd322074e
-- [X] https://www.kaggle.com/blurredmachine/lenet-architecture-a-complete-guide
-
-**Thanks to [Amit Chaudhary](www.github.com/amitness) for his github repo which inspired to make my own**
