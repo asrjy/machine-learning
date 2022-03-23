@@ -5,9 +5,9 @@
 ### My analysis of datasets I find interesting
 
 ### Checklist
- - [ ] Foundational Mathematics
- - [ ] Essentials of AI
- - [ ] Data Analysis and Visualization
+ - [X] Foundational Mathematics
+ - [X] Essentials of AI
+ - [X] Data Analysis and Visualization
  - [ ] Machine Learning
  - [ ] Course - Python for Machine Learning and Data Science
  - [ ] Course - Master Math by Coding in Python
@@ -15,6 +15,7 @@
  - [ ] Book - Hundred Page Machine Learning 
  - [ ] Book - Approaching Almost Any Machine Learning Problem
  - [ ] Book - d2l.ai
+ - [ ] Book - Machine Learning with Scikit-Learn and PyTorch by Sebastian Raschka
 
 
 ### Implementations of Algorithms from Scratch
