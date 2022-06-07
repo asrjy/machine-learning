@@ -1,4 +1,4 @@
-# My journey to becoming a Machine Learning Engineer
+# Becoming an MLE
 Almost daily updates of stuff I learn and make use of. 
 
 ## What's in this repo?
