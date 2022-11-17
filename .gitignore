@@ -2,3 +2,6 @@
 ./mlb-sraschka/machine-learning-book
 ./assignments
 ./mlb-sraschka/MNIST
+# ./mlb-sraschka/celeba.zip
+mlb-sraschka/celeba
+
